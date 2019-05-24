@@ -4,6 +4,7 @@
 
 import urllib.request as urlreq
 from time import time
+from datetime import date
 
 
 class MarkXCore:
@@ -11,13 +12,14 @@ class MarkXCore:
     def __init__(self):
         self.build = [
             time(),
-            0.0006,
+            0.0007,
             'a',
         ]
         print('DEXTER VIRTUAL INTELLIGENCE MARK 10:', self.build)
 
     def run(self):
         print('\n\nHello World.')
+        print('\nThe time is currently ', time())
 
 
 if __name__ == '__main__':
