@@ -3,7 +3,7 @@
 # AUTHOR : EASTER LTD
 
 import urllib.request as urlreq
-from time import time, sleep
+from time import time
 
 
 class MarkXCore:
@@ -11,7 +11,7 @@ class MarkXCore:
     def __init__(self):
         self.build = [
             time(),
-            0.0002,
+            0.0003,
             'a',
         ]
         print('DEXTER VIRTUAL INTELLIGENCE MARK 10:', self.build)
