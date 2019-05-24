@@ -11,7 +11,7 @@ class MarkXCore:
     def __init__(self):
         self.build = [
             time(),
-            0.0005,
+            0.0006,
             'a',
         ]
         print('DEXTER VIRTUAL INTELLIGENCE MARK 10:', self.build)
@@ -23,6 +23,7 @@ class MarkXCore:
 if __name__ == '__main__':
     # SOFT INITIALIZATION
     Core = MarkXCore()
+    urlreq.urlcleanup()
     print('>> SYSTEM UPDATE')
     # CHECK UPDATE REPOSITORY
     http = urlreq.urlopen("https://github.com/Oweneaster/mkx")
