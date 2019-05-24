@@ -11,7 +11,7 @@ class MarkXCore:
     def __init__(self):
         self.build = [
             time(),
-            0.0004,
+            0.0005,
             'a',
         ]
         print('DEXTER VIRTUAL INTELLIGENCE MARK 10:', self.build)
@@ -37,8 +37,9 @@ if __name__ == '__main__':
     print(' LATEST VERSION:', vers)
     # SYSTEM VERSION CHECKING
     if vers > Core.build[1]:
-        print(' SYSTEM IS OUT-OF-DATE')
+        print(' SYSTEM IS OUT-OF-DATE\n  Updating...')
         data = urlreq.urlretrieve("https://raw.github.com/Oweneaster/mkx/master/main.py", "main.py")
+        print('  Success!')
     elif vers == Core.build[1]:
         print(' SYSTEM IS UP-TO-DATE')
         Core.run()
