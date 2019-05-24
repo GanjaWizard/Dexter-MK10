@@ -1,11 +1,11 @@
 # Virtual Intelligence Mark X Platform
 Virtual Intelligence Mark 10 Platform - OFFICIAL OPEN-SOURCE UPDATE REPOSITORY
 
-/VERSION: 
+/VERSION 
 >0.0001a
 
-/AUTHOR: 
+/AUTHOR 
 >Easter LTD
 
-/BUILD: 
+/BUILD 
 >21:10-24/05/2019
