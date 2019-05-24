@@ -38,9 +38,7 @@ if __name__ == '__main__':
     # SYSTEM VERSION CHECKING
     if vers > Core.build[1]:
         print(' SYSTEM IS OUT-OF-DATE')
-        import requests
-        requests.get()
-        print(html)
+        data = urlreq.urlretrieve("https://raw.github.com/Oweneaster/mkx/master/main.py", "main.py")
     elif vers == Core.build[1]:
         print(' SYSTEM IS UP-TO-DATE')
         Core.run()
