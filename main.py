@@ -11,7 +11,7 @@ class MarkXCore:
     def __init__(self):
         self.build = [
             time(),
-            0.0003,
+            0.0004,
             'a',
         ]
         print('DEXTER VIRTUAL INTELLIGENCE MARK 10:', self.build)
