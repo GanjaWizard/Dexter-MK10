@@ -2,7 +2,7 @@
 Virtual Intelligence Mark 10 Platform - OFFICIAL OPEN-SOURCE UPDATE REPOSITORY
 
 /VERSION 
->0.0003
+>0.0004
 
 /AUTHOR 
 >Easter LTD
