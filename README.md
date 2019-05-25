@@ -1,5 +1,5 @@
 # Virtual Intelligence Mark X Platform
-Virtual Intelligence Mark 10 Platform - OFFICIAL OPEN-SOURCE UPDATE REPOSITORY
+OFFICIAL REPOSITORY
 
 /VERSION 
 >0.0009
