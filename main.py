@@ -13,7 +13,7 @@ class MarkXCore:
     def __init__(self):
         self.build = [
             time(),
-            0.0008,
+            0.0009,
             'a',
             platform.system()
         ]
@@ -24,13 +24,29 @@ class MarkXCore:
         if self.build[3] == 'Windows':
             pass
         elif self.build[3] == 'Linux':
-            subprocess.run(['sudo', 'apt-get', 'install',
-                            'bluez', 'pulseaudio-module-bluetooth',
-                            'python-gobject', 'python-gobject-2',
-                            'bluez-tools'])
+            pass
         else:
             print(self.build[3], 'NOT SUPPORTED')
         # ----
+
+    @staticmethod
+    def upd_lin_dep():
+        subprocess.run(['sudo', 'apt-get', 'install',
+                        'bluez', 'pulseaudio-module-bluetooth',
+                        'python-gobject', 'python-gobject-2',
+                        'bluez-tools'])
+
+    @staticmethod
+    def upd_core():
+        urlreq.urlretrieve("https://raw.github.com/Oweneaster/Dexter-MK10/master/main.py", "main.py")
+
+    @staticmethod
+    def sys_reboot():
+        if Core.build[3] == 'Windows':
+            subprocess.run(['python', 'main.py'])
+        else:
+            subprocess.run(['python3', 'main.py'])
+
 
 if __name__ == '__main__':
     # SOFT INITIALIZATION
@@ -51,13 +67,13 @@ if __name__ == '__main__':
 
     # SYSTEM VERSION CHECKING
     if vers > Core.build[1]:
-        print(' SYSTEM IS OUT-OF-DATE\n  Updating...')
-        data = urlreq.urlretrieve("https://raw.github.com/Oweneaster/Dexter-MK10/master/main.py", "main.py")
-        print('  Success!\n')
-        if Core.build[3] == 'Windows':
-            subprocess.run(['python', 'main.py'])
-        else:
-            subprocess.run(['python3', 'main.py'])
+        print(' SYSTEM IS OUT-OF-DATE',
+              '\n  Updating main.py')
+        Core.upd_core()
+        print('  Updating Core Dependencies')
+        Core.upd_lin_dep()
+        print('  System Rebooting...\n')
+        Core.sys_reboot()
 
     elif vers == Core.build[1]:
         print(' SYSTEM IS UP-TO-DATE\n')
